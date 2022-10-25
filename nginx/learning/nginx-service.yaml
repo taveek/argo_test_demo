@@ -2,9 +2,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: nginx
-  annotations:
-    argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/sync-wave: "0"
 spec:
   selector:
     app: nginx
