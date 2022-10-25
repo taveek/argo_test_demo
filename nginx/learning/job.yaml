@@ -3,6 +3,7 @@ kind: Job
 metadata:
   generateName: upgrade-sql-schema-1
   annotations:
+    argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/sync-wave: "0"
 spec:
   template:
