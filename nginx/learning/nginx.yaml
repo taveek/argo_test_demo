@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   annotations:
-    argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/sync-wave: "1"
   labels:
     app: nginx
