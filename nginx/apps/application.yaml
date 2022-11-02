@@ -12,6 +12,7 @@ spec:
     targetRevision: HEAD
     path: nginx/learning
     helm:
+      values:
       parameters:
         - name: replicaCount
         value: "1"
