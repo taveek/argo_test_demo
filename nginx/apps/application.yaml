@@ -11,10 +11,10 @@ spec:
     repoURL: https://github.com/myrondev/argo_test_demo.git
     targetRevision: HEAD
     path: nginx/learning
-    helm:
-      parameters:
-        - name: replicaCount
-          value: 1
+    # helm:
+    #   parameters:
+    #     - name: replicaCount
+    #       value: 1
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
