@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sync-phases1
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  destination:
+    namespace: application
+    server: "https://kubernetes.default.svc"
+  project: default
+  source:
+    path: nginx/learning/
+    repoURL: https://github.com/myrondev/argo_test_demo.git
+    targetRevision: HEAD
+    directory:
+      recurse: true
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
