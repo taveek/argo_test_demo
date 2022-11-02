@@ -15,7 +15,7 @@ spec:
       values:
       parameters:
         - name: replicaCount
-          value: "1"
+          value: "{{ .Values.replicaCount }}"
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
