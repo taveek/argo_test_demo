@@ -17,14 +17,15 @@ spec:
     helm:
       values: |
         args:
-        - --secure-port=10250
-        - --cert-dir=/tmp
-        - --kubelet-preferred-address-types=InternalIP
-        - /metrics-server
-        - --kubelet-use-node-status-port
-        - --metric-resolution=15s
         - --kubelet-insecure-tls=true
-        - --requestheader-client-ca-file
   syncPolicy:
     automated:
       prune: true
+
+
+      # - --secure-port=10250
+        # - --cert-dir=/tmp
+        # - --kubelet-preferred-address-types=InternalIP
+        # - /metrics-server
+        # - --kubelet-use-node-status-port
+        # - --metric-resolution=15s - --requestheader-client-ca-file
