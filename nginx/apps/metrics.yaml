@@ -15,18 +15,21 @@ spec:
     repoURL: https://github.com/kubernetes-sigs/metrics-server.git
     targetRevision: HEAD
     helm:
-      values: |
-        spec:
-          containers:
-          - args:
-            - --secure-port=10250
-            - --cert-dir=/tmp
-            - --kubelet-preferred-address-types=InternalIP
-            - /metrics-server
-            - --kubelet-use-node-status-port
-            - --metric-resolution=15s
-            - --kubelet-insecure-tls=true
-            - --requestheader-client-ca-file
+      # values: |
+      #   spec:
+      #     containers:
+      #     - args:
+      #       - --secure-port=10250
+      #       - --cert-dir=/tmp
+      #       - --kubelet-preferred-address-types=InternalIP
+      #       - /metrics-server
+      #       - --kubelet-use-node-status-port
+      #       - --metric-resolution=15s
+      #       - --kubelet-insecure-tls=true
+      #       - --requestheader-client-ca-file
+      parameters:
+        - name: defaultArgs[4]
+          value: "kubelet-insecure-tls=true"
   syncPolicy:
     automated:
       prune: true
