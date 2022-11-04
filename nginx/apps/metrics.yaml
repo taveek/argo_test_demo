@@ -29,7 +29,7 @@ spec:
       #       - --requestheader-client-ca-file
       parameters:
         - name: defaultArgs[4]
-          value: "kubelet-insecure-tls=true"
+          value: "--kubelet-insecure-tls=true"
   syncPolicy:
     automated:
       prune: true
