@@ -23,7 +23,7 @@ spec:
       #   - name: defaultArgs[3]
       #     value: "--metric-resolution=40s"
   syncPolicy:
-    automated:
+    # automated:
       prune: true
 
 
