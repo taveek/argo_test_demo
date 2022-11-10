@@ -23,8 +23,8 @@ spec:
       #   - name: defaultArgs[3]
       #     value: "--metric-resolution=40s"
   syncPolicy:
-      automated: false
-      prune: true
+      automated:
+        prune: true
 
 
       # - --secure-port=10250
