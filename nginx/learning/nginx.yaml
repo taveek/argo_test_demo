@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Chart.Name }}-nginx-deployment
+  name: nginx-deployment
   annotations:
     argocd.argoproj.io/sync-wave: "1"
   labels:
     app: nginx
 spec:
-  replicas: {{ Values.replicaCount }}
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
