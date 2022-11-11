@@ -13,7 +13,7 @@ spec:
     path: nginx/helm/mychart
     helm:
       parameters:
-        - name: replicaCount
+        - name: nginx.replicaCount
           value: "1"
   destination:
     server: https://kubernetes.default.svc
