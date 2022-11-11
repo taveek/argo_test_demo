@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-helm
+  name: mychart-nginx
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "1"
@@ -11,10 +11,10 @@ spec:
     repoURL: https://github.com/myrondev/argo_test_demo.git
     targetRevision: HEAD
     path: nginx/helm
-    # helm:
-    #   parameters:
-    #     - name: replicaCount
-    #       value: "3"
+    helm:
+      parameters:
+        - name: replicaCount
+          value: "3"
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
