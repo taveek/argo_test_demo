@@ -12,7 +12,7 @@ spec:
     # plugin:
     #   env:
     #       - name: OPERATOR_WEBHOOK_BROADCAST_URL
-    #         value: 'https://hooks.slack.com/services/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'
+    #         value: ''
     helm:
       values: |
         trivy:
