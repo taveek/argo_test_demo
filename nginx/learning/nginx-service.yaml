@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: nginx
+  name: {{ .Chart.Name }}-nginx-service
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 spec:
