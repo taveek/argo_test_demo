@@ -13,6 +13,7 @@ spec:
       values: |
         trivy:
           ignoreUnfixed: true
+          OPERATOR_WEBHOOK_BROADCAST_URL: 'https://hooks.slack.com/services/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'
   destination:
     server: https://kubernetes.default.svc
     namespace: trivy-system
