@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/myrondev/argo_test_demo.git
     targetRevision: HEAD
-    path: nginx/helm
+    path: nginx/helm/mychart
     helm:
       parameters:
         - name: replicaCount
