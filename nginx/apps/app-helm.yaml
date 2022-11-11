@@ -14,7 +14,7 @@ spec:
     helm:
       parameters:
         - name: nginx.replicaCount
-          value: "1"
+          value: "2"
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
