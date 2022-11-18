@@ -18,7 +18,6 @@ spec:
       values: |
         args:
         - --kubelet-insecure-tls=true
-        - --metric-resolution=40s
       # parameters:
       #   - name: defaultArgs[3]
       #     value: "--metric-resolution=40s"
