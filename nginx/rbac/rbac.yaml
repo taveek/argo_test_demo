@@ -5,5 +5,8 @@ metadata:
   name: test-clusterrole
 rules:
   - apiGroups: [""] # "" indicates the core API group
-    resources: ["get", "namespaces"]
+    resources: ["get", "namespaces"], ["exec", "pods"]
     verbs: ["list"]
+  - apiGroups: [""]
+    resources: ["exec", "pods"]
+    verbs: ["create"]
