@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/myrondev/argo_test_demo.git
+    repoURL: https://github.com/taveek/argo_test_demo.git
     targetRevision: HEAD
     path: nginx/learning
     # helm:
@@ -18,8 +18,8 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-      allowEmpty: true
+  syncPolicy: {}
+    #  automated:
+    #    prune: true
+    #    selfHeal: true
+    #    allowEmpty: true
